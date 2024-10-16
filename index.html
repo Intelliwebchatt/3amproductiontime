@@ -1,93 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FM Payments - Merchant Services Expert</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to CSS stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <!-- Include Font Awesome for social media icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTTX+6+EMrkgQfTq4VtInqd1M4VemcuEFVgFZ5LXw9q5tqcQiVJHR/NJ5uIYjQpExi6IX2kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-</head>
-<body>
+// Select reel elements and controls
+const reels = document.querySelectorAll('.reel');
+const upBtn = document.querySelector('.up-btn');
+const downBtn = document.querySelector('.down-btn');
+const spinBtn = document.querySelector('.spin-btn');
 
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-        <div class="hero-content">
-            <h1>FM Payments - Merchant Services Expert</h1>
-            <p class="tagline">We have fun saving you money.</p>
-        </div>
-    </header>
+// Current reel index to keep track of which reel is being viewed
+let currentReelIndex = 0;
 
-    <!-- Slot Machine Reels Navigation -->
-    <section class="slot-machine" id="slot-machine">
-        <h2>Our Services</h2>
-        <div class="controls">
-            <button class="btn up-btn">&#9650;</button>
-        </div>
-        <div class="reels-container">
-            <div class="reel" id="reel1">
-                <a href="#payment-processing">Payment Processing</a>
-                <p>Fast, secure, and cost-effective solutions.</p>
-            </div>
-            <div class="reel" id="reel2">
-                <a href="#pos-systems">POS Systems</a>
-                <p>Reliable and scalable systems.</p>
-            </div>
-            <div class="reel" id="reel3">
-                <a href="#merchant-analytics">Merchant Analytics</a>
-                <p>Actionable insights for your business.</p>
-            </div>
-        </div>
-        <div class="controls">
-            <button class="btn down-btn">&#9660;</button>
-        </div>
-        <button class="btn spin-btn">Spin</button>
-    </section>
+// Scroll up through the reels
+upBtn.addEventListener('click', () => {
+    if (currentReelIndex > 0) {
+        reels[currentReelIndex].classList.remove('visible');
+        currentReelIndex--;
+        reels[currentReelIndex].classList.add('visible');
+    }
+});
 
-    <!-- Contact Sheet -->
-    <section class="contact-sheet" id="contact-sheet">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label for="name">Name*</label>
-            <input type="text" id="name" name="name" required>
+// Scroll down through the reels
+downBtn.addEventListener('click', () => {
+    if (currentReelIndex < reels.length - 1) {
+        reels[currentReelIndex].classList.remove('visible');
+        currentReelIndex++;
+        reels[currentReelIndex].classList.add('visible');
+    }
+});
 
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
+// Simulate the spinning of reels
+spinBtn.addEventListener('click', () => {
+    // Randomly select a reel index to "land" on
+    let randomIndex = Math.floor(Math.random() * reels.length);
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
+    // Clear any previous flashes
+    reels.forEach(reel => reel.classList.remove('flash'));
 
-            <label for="message">Message*</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="btn submit-btn">Submit and Save!</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="social-media">
-            <a href="#" class="social-btn linkedin" aria-label="LinkedIn"></a>
-            <a href="#" class="social-btn facebook" aria-label="Facebook"></a>
-            <a href="#" class="social-btn twitter" aria-label="Twitter"></a>
-        </div>
-        <nav class="footer-nav">
-            <a href="#hero">About Us</a>
-            <a href="#slot-machine">Services</a>
-            <a href="#contact-sheet">Contact</a>
-        </nav>
-    </footer>
-
-    <!-- Link to JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
+    // Simulate spinning with a timeout
+    reels[currentReelIndex].classList.remove('visible');
+    currentReelIndex = randomIndex;
+    reels[currentReelIndex].classList.add('visible');
+    
+    // Flash the selected reel
+    setTimeout(() => {
+        reels[currentReelIndex].classList.add('flash');
+    }, 1000);
+});
