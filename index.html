@@ -2,87 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FM Payments - Merchant Services Expert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
         <div class="hero-content">
-            <img src="https://via.placeholder.com/150" alt="Agent Photo" class="agent-photo">
-            <h1 class="agent-name">John Doe</h1>
-            <h2 class="agent-title">FM Payments - Merchant Services Expert</h2>
+            <h1>FM Payments - Merchant Services Expert</h1>
             <p class="tagline">We have fun saving you money.</p>
         </div>
-    </section>
+    </header>
 
-    <!-- Slot Machine Navigation -->
+    <!-- Slot Machine Reels Navigation -->
     <section class="slot-machine">
-        <div class="reels-container">
-            <button class="nav-button up-button" id="up-button">&#9650;</button>
-            <div class="reels">
-                <div class="reel" data-service="payment-processing">
-                    <div class="service-card">
-                        <h3>Payment Processing</h3>
-                        <p>Fast, secure, and cost-effective solutions.</p>
-                    </div>
-                </div>
-                <div class="reel" data-service="pos-systems">
-                    <div class="service-card">
-                        <h3>POS Systems</h3>
-                        <p>Reliable and scalable systems.</p>
-                    </div>
-                </div>
-                <div class="reel" data-service="merchant-analytics">
-                    <div class="service-card">
-                        <h3>Merchant Analytics</h3>
-                        <p>Actionable insights for your business.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="nav-button down-button" id="down-button">&#9660;</button>
+        <h2>Our Services</h2>
+        <div class="controls">
+            <button class="btn up-btn">&#9650;</button>
         </div>
-        <button class="spin-button" id="spin-button">Spin</button>
+        <div class="reels-container">
+            <div class="reel" id="reel1">
+                <a href="#payment-processing">Payment Processing</a>
+                <p>Fast, secure, and cost-effective solutions.</p>
+            </div>
+            <div class="reel" id="reel2">
+                <a href="#pos-systems">POS Systems</a>
+                <p>Reliable and scalable systems.</p>
+            </div>
+            <div class="reel" id="reel3">
+                <a href="#merchant-analytics">Merchant Analytics</a>
+                <p>Actionable insights for your business.</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn down-btn">&#9660;</button>
+        </div>
+        <button class="btn spin-btn">Spin</button>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form-section">
+    <!-- Contact Sheet -->
+    <section class="contact-sheet">
         <h2>Contact Us</h2>
-        <form id="contact-form" novalidate>
-            <label for="name">Name<span class="required">*</span></label>
+        <form id="contact-form">
+            <label for="name">Name*</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email<span class="required">*</span></label>
+            <label for="email">Email*</label>
             <input type="email" id="email" name="email" required>
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone">
 
-            <label for="message">Message<span class="required">*</span></label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" required></textarea>
 
-            <button type="submit" class="submit-button">Submit and Save!</button>
+            <button type="submit" class="btn submit-btn">Submit and Save!</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="social-media">
-            <a href="#" aria-label="LinkedIn" class="social-link"><span class="light"></span></a>
-            <a href="#" aria-label="Facebook" class="social-link"><span class="light"></span></a>
-            <a href="#" aria-label="Twitter" class="social-link"><span class="light"></span></a>
+            <a href="#" class="social-btn linkedin" aria-label="LinkedIn"></a>
+            <a href="#" class="social-btn facebook" aria-label="Facebook"></a>
+            <a href="#" class="social-btn twitter" aria-label="Twitter"></a>
         </div>
-        <div class="footer-links">
-            <a href="#about-us">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <nav class="footer-nav">
+            <a href="#hero">About Us</a>
+            <a href="#slot-machine">Services</a>
+            <a href="#contact-sheet">Contact</a>
+        </nav>
     </footer>
 
+    <!-- Link to JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
