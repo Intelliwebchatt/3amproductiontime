@@ -1,0 +1,279 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f0f8ff; /* Light and welcoming background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.agent-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.agent-name {
+    font-size: 2.5rem;
+    color: #007BFF; /* Bright blue */
+}
+
+.agent-title {
+    font-size: 1.5rem;
+    color: #28A745; /* Bright green */
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #FFA500; /* Bright orange */
+}
+
+/* Slot Machine Navigation */
+.slot-machine {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.reels-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+.reels {
+    display: flex;
+    overflow: hidden;
+    width: 60%;
+    max-width: 600px;
+    position: relative;
+}
+
+.reel {
+    min-width: 33.333%;
+    transition: transform 0.5s;
+}
+
+.service-card {
+    background-color: #e9f5ff;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+    background-color: #d0eaff;
+    transform: scale(1.05);
+}
+
+.spin-button {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.spin-button:hover {
+    box-shadow: 0 0 10px #FFA500;
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    box-shadow: 0 0 10px #28A745;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.social-link .light {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFA500; /* Default color for slot machine light */
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover .light {
+    background-color: #fff;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFA500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reels {
+        width: 80%;
+    }
+
+    .nav-button {
+        padding: 15px;
+        font-size: 2rem;
+    }
+
+    .spin-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .reels-container {
+        flex-direction: column;
+    }
+
+    .nav-button {
+        margin: 10px 0;
+    }
+
+    .reels {
+        width: 100%;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .agent-name {
+        font-size: 2rem;
+    }
+
+    .agent-title {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
