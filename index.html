@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FM Payments - Merchant Services Expert</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Hero Section -->
-    <section>
-        <div>
-            <h1>FM Payments - Merchant Services Expert</h1>
-            <p>We have fun saving you money.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://via.placeholder.com/150" alt="Agent Photo" class="agent-photo">
+            <h1 class="agent-name">John Doe</h1>
+            <h2 class="agent-title">FM Payments - Merchant Services Expert</h2>
+            <p class="tagline">We have fun saving you money.</p>
         </div>
     </section>
 
-    <!-- Slot Machine Section -->
-    <section>
-        <div id="slot-machine">
-            <button id="upBtn">Up</button>
-            <div id="reel1">
-                <div>Payment Processing</div>
-                <div>POS Systems</div>
-                <div>Merchant Analytics</div>
+    <!-- Slot Machine Navigation -->
+    <section class="slot-machine">
+        <div class="reels-container">
+            <button class="nav-button up-button" id="up-button">&#9650;</button>
+            <div class="reels">
+                <div class="reel" data-service="payment-processing">
+                    <div class="service-card">
+                        <h3>Payment Processing</h3>
+                        <p>Fast, secure, and cost-effective solutions.</p>
+                    </div>
+                </div>
+                <div class="reel" data-service="pos-systems">
+                    <div class="service-card">
+                        <h3>POS Systems</h3>
+                        <p>Reliable and scalable systems.</p>
+                    </div>
+                </div>
+                <div class="reel" data-service="merchant-analytics">
+                    <div class="service-card">
+                        <h3>Merchant Analytics</h3>
+                        <p>Actionable insights for your business.</p>
+                    </div>
+                </div>
             </div>
-            <div id="reel2">
-                <div>Fast, secure, and cost-effective solutions.</div>
-                <div>Reliable and scalable systems.</div>
-                <div>Actionable insights for your business.</div>
-            </div>
-            <div id="reel3">
-                <div>Learn More</div>
-                <div>Learn More</div>
-                <div>Learn More</div>
-            </div>
-            <button id="downBtn">Down</button>
+            <button class="nav-button down-button" id="down-button">&#9660;</button>
         </div>
-        <button id="spinBtn">Spin</button>
+        <button class="spin-button" id="spin-button">Spin</button>
     </section>
 
-    <!-- Contact Section -->
-    <section>
+    <!-- Contact Form -->
+    <section class="contact-form-section">
         <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="name">Name</label>
+        <form id="contact-form" novalidate>
+            <label for="name">Name<span class="required">*</span></label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
+            <label for="email">Email<span class="required">*</span></label>
             <input type="email" id="email" name="email" required>
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="message">Message<span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Submit and Save!</button>
+            <button type="submit" class="submit-button">Submit and Save!</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
+        <div class="social-media">
+            <a href="#" aria-label="LinkedIn" class="social-link"><span class="light"></span></a>
+            <a href="#" aria-label="Facebook" class="social-link"><span class="light"></span></a>
+            <a href="#" aria-label="Twitter" class="social-link"><span class="light"></span></a>
         </div>
-        <nav>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
+        <div class="footer-links">
+            <a href="#about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
