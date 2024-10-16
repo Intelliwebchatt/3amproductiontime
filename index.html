@@ -2,270 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>3AM Production Time</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #fff;
-        }
-        h1, h2, h3, p {
-            margin: 0;
-            padding: 0 15px;
-        }
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            background-color: #003366; /* Dark Blue */
-            padding: 10px;
-            align-items: center;
-        }
-        .navbar a {
-            color: white;
-            padding: 12px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            background-color: #ff0000; /* Red */
-        }
-        /* Dropdown Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #003366;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #ff0000;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        /* Hero Section */
-        .hero {
-            position: relative;
-            text-align: center;
-            color: #ffffff;
-        }
-        .hero img {
-            width: 100%;
-            height: auto;
-        }
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            text-shadow: 2px 2px 4px #000000;
-        }
-        .hero-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-content p {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
-        .hero-content button {
-            background-color: #ff0000;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .hero-content button:hover {
-            background-color: #cc0000;
-        }
-        /* Accordion Styles */
-        .accordion {
-            background-color: #003366;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 90%;
-            margin: 10px auto;
-            border: none;
-            text-align: left;
-            outline: none;
-            transition: 0.4s;
-        }
-        .accordion:hover {
-            background-color: #ff0000;
-        }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            display: none;
-            overflow: hidden;
-            width: 90%;
-            margin: auto;
-            color: #003366;
-        }
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-        .modal-content {
-            background-color: white;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #003366;
-            width: 80%;
-            max-width: 500px;
-        }
-        .close {
-            color: #003366;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #ff0000;
-        }
-        /* Footer Styles */
-        .footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-        /* Responsive Styles */
-        @media screen and (max-width: 600px) {
-            .navbar a {
-                display: block;
-                text-align: center;
-            }
-            .dropdown-content a {
-                text-align: left;
-            }
-            .hero-content h1 {
-                font-size: 32px;
-            }
-            .hero-content p {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FM Payments - Merchant Services Expert</title>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <div class="dropdown">
-            <a href="#about">About &#9662;</a>
-            <div class="dropdown-content">
-                <a href="#mission">Our Mission</a>
-                <a href="#team">Our Team</a>
-                <a href="#values">Our Values</a>
-            </div>
-        </div>
-        <a href="#contact">Contact</a>
-    </div>
-
     <!-- Hero Section -->
-    <div class="hero" id="home">
-        <img src="https://raw.githubusercontent.com/Intelliwebchatt/The-truth-/refs/heads/main/qv6yA4qrxUfY2hJQzHME--1--abbbj.webp" alt="3AM Production Time Banner">
-        <div class="hero-content">
-            <h1>3AM Production Time</h1>
-            <p class="highlight">Uncovering the Truth</p>
-            <p>Welcome to 3AM Production Time, where we dive deep into the stories behind the headlines. Our mission is to challenge the narratives fed to the public and bring forward the questions that aren't being asked.</p>
-            <button id="openModal">Subscribe Now</button>
+    <section>
+        <div>
+            <h1>FM Payments - Merchant Services Expert</h1>
+            <p>We have fun saving you money.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Accordion Sections -->
-    <button class="accordion">Our Mission</button>
-    <div class="panel">
-        <p>Our mission is to challenge the narratives fed to the public and bring forward the questions that aren't being asked. Through investigative journalism, we aim to uncover the truth and shed light on the real issues hidden beneath the surface.</p>
-    </div>
+    <!-- Slot Machine Section -->
+    <section>
+        <div id="slot-machine">
+            <button id="upBtn">Up</button>
+            <div id="reel1">
+                <div>Payment Processing</div>
+                <div>POS Systems</div>
+                <div>Merchant Analytics</div>
+            </div>
+            <div id="reel2">
+                <div>Fast, secure, and cost-effective solutions.</div>
+                <div>Reliable and scalable systems.</div>
+                <div>Actionable insights for your business.</div>
+            </div>
+            <div id="reel3">
+                <div>Learn More</div>
+                <div>Learn More</div>
+                <div>Learn More</div>
+            </div>
+            <button id="downBtn">Down</button>
+        </div>
+        <button id="spinBtn">Spin</button>
+    </section>
 
-    <button class="accordion">Latest Reports</button>
-    <div class="panel">
-        <p>Subscribe for in-depth reports, interviews, and discussions that will make you think twice about what's really happening around you.</p>
-    </div>
+    <!-- Contact Section -->
+    <section>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-    <button class="accordion">Join the Conversation</button>
-    <div class="panel">
-        <p>In a world where information is filtered, we're here to break the silence.</p>
-    </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated with our latest reports and discussions.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-            <button type="submit" style="width: 100%; padding: 10px; background-color: #003366; color: white; border: none;">Subscribe</button>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit and Save!</button>
         </form>
-      </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 3AM Production Time. All rights reserved.</p>
-    </div>
+    <footer>
+        <div>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Accordion Functionality
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active-accordion");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-
-        // Modal Functionality
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("openModal");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
